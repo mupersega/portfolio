@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+:root {
+    --darkest: #211919;
+    --dark: #523a2a;
+    --light: #8a6b3e;
+    --lightest: #eadb74;
+    --main_font: 'VT323', monospace;
+  }
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+    "nav nav nav"
+    "main main main"
+    "foot foot foot"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2rem 4fr 1fr;
+    height: 100%;
+    width: 100%;
+    margin-top: 2%;
+    font-family: var(--main_font);
+    background-color: var(--darkest);
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    position: relative;
+    width: 95%;
+    height: 2rem;
+    margin-left: 2%;
+    margin-bottom: 2px;
+    font-size: 1.5rem;
+    color: var(--lightest);
+}
+
+a {
+    display: flex;
+    padding: 0px 5px;
+    text-decoration: none;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    color: var(--lightest);
+}
+
+a.on_page {
+    margin-bottom: -4px;
+    text-transform: uppercase;
+    border-left: 2px solid var(--lightest);
+    border-top: 2px solid var(--lightest);
+    border-right: 1px solid var(--dark);
+    color:var(--darkest);
+    background-color:var(--light);
+    z-index: 1;
+}
+
+a.on_page:hover {
+    color: white;
+    transition: 1s;
+}
+
+a.off_page:hover {
+    background-color: var(--dark);
+    color: white;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+main {
+    display: block;
+    grid-area: main;
+    width: 95%;
+    margin: 2px 2% 2% 2%;
+    padding: 5px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-left: 2px solid var(--lightest);
+    border-top: 2px solid var(--lightest);
+    border-right: 2px solid var(--dark);
+    border-bottom: 2px solid var(--dark);
+    background-color: var(--light);
+}
