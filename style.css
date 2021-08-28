@@ -4,9 +4,11 @@
 :root {
     --darkest: #211919;
     --dark: #523a2a;
-    --light: #8a6b3e;
+    --mid: #8a6b3e;
+    --light: #c19c4d;
     --lightest: #eadb74;
-    --accent: #6bb9b6;
+    --accent: #21fdf2;
+    --dark_accent: #4a807d;
     --main_font: 'VT323', monospace;
   }
 
@@ -21,25 +23,50 @@ body {
     grid-template-areas:
     "nav nav nav"
     "main main main"
-    "foot foot foot"
+    "footer footer footer"
     ;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2rem 4fr 1fr;
-    height: 100%;
-    width: 100%;
-    margin-top: 2%;
+    grid-template-rows: 10% 70% 10%;
+    margin: 10px;
+    /* height: 100vmax; */
     font-family: var(--main_font);
     background-color: var(--darkest);
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    grid-area: main;
+    padding: 5px;
+    margin-top: 2px;
+    height: calc(100vh - 100px);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-left: 2px solid var(--lightest);
+    border-top: 2px solid var(--lightest);
+    border-right: 2px solid var(--dark);
+    border-bottom: 2px solid var(--dark);
+    background-color: var(--mid);
+    overflow-y: scroll;
+    text-shadow: var(--lightest) 1px 0 5px;
+}
+
+footer {
+    display: flex;
+    grid-area: footer;
+    align-self: auto;
+    background-color:var(--dark);
+}
+span {
+    color: var(--accent);
+    text-shadow: black 1px 0 5px;
 }
 
 nav {
     grid-area: nav;
     display: flex;
-    position: relative;
-    width: 95%;
-    height: 2rem;
-    margin-left: 2%;
-    margin-bottom: 2px;
     font-size: 1.5rem;
     color: var(--lightest);
 }
@@ -55,19 +82,18 @@ a {
 
 a.on_page {
     margin-bottom: -4px;
-    text-transform: uppercase;
     border-left: 2px solid var(--lightest);
     border-top: 2px solid var(--lightest);
     border-right: 1px solid var(--dark);
     color:var(--accent);
-    background-color:var(--light);
+    background-color:var(--mid);
     text-shadow: var(--darkest) 1px 0 5px;
     z-index: 1;
 }
 
 a.on_page:hover {
     color: white;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 a.off_page:hover {
@@ -76,30 +102,41 @@ a.off_page:hover {
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-main {
-    display: block;
-    grid-area: main;
-    width: 95%;
-    margin: 2px 2% 2% 2%;
-    padding: 5px;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-    border-left: 2px solid var(--lightest);
-    border-top: 2px solid var(--lightest);
-    border-right: 2px solid var(--dark);
-    border-bottom: 2px solid var(--dark);
-    background-color: var(--light);
-    text-shadow: var(--lightest) 1px 0 5px;
-}
-
-span {
-    color: var(--accent);
-    text-shadow: black 1px 0 5px;
-}
-
 span:hover {
     text-shadow: var(--accent) 1px 0 10px;
     transition:2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+section.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px 2px;
+    gap: 2px;
+    border: 2px solid var(--lightest);
+    overflow-y: scroll;
+    justify-content: space-around;
+    align-content: flex-start;
+    background-color:var(--dark);
+}
+
+.project-card {
+    display: inline;
+    flex: 1;
+    float: left;
+    position: relative;
+    min-width: 140px;
+    max-width: 180px;
+    height: 200px;
+    border-left: 2px solid var(--lightest);
+    border-top: 2px solid var(--lightest);
+    border-right: 2px solid var(--darkest);
+    border-bottom: 2px solid var(--darkest);
+    background-color: var(--light);
+}
+
+.project-card:hover {
+    border-left: 3px solid var(--darkest);
+    border-top: 3px solid var(--darkest);
+    border-right: 3px solid var(--lightest);
+    border-bottom: 3px solid var(--lightest);
 }
