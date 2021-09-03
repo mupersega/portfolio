@@ -31,8 +31,8 @@ body {
   display: grid;
   grid-template-areas: "nav nav nav" "main main main" "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 15% 70% 5%;
-  margin: 15px auto;
+  grid-template-rows: 10% 70% 10%;
+  margin: 10px auto;
   font-family: var(--main_font);
   background-color: var(--darkest);
   justify-content: center;
@@ -42,9 +42,9 @@ main {
   display: flex;
   grid-area: main;
   padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: 2px;
-  margin-left: 15px;
-  margin-right: 15px;
   height: calc(100vh - 100px);
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -54,13 +54,14 @@ main {
   border-top: 2px solid var(--lightest);
   border-right: 2px solid var(--dark);
   border-bottom: 2px solid var(--dark);
-  background-color: var(--mid);
+  background-color: var(--light);
   text-shadow: var(--lightest) 1px 0 5px;
 }
 main.home {
   background-image: url("assets/landing_front.png"), url("assets/landing_logo.png"), url("assets/landing_back.png");
+  background-position-x: center;
+  background-position-y: bottom;
   background-repeat: repeat-x;
-  background-position: bottom;
   background-attachment: scroll;
   transition: background-position 15s cubic-bezier(0.48, 0.01, 0.52, 0.99);
   transition-delay: 1s;
@@ -76,8 +77,9 @@ footer {
   align-self: auto;
   justify-content: right;
   align-items: top;
-  margin-right: 5px;
   padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
   font-family: var(--title_font);
   height: 50px;
   font-size: 0.8rem;
@@ -116,7 +118,7 @@ a.on_page {
   border-top: 2px solid var(--lightest);
   border-right: 1px solid var(--dark);
   color: var(--accent);
-  background-color: var(--mid);
+  background-color: var(--light);
   text-shadow: var(--darkest) 1px 0 5px;
   z-index: 1;
 }
@@ -151,7 +153,6 @@ a.off_page:hover {
 .card {
   display: flex;
   flex: 1;
-  padding: 5px;
   border-left: 2px solid var(--lightest);
   border-top: 2px solid var(--lightest);
   border-right: 2px solid var(--darkest);
@@ -165,12 +166,35 @@ a.off_page:hover {
   /* vv margin to account for border increase vv */
   /* margin: -1px; */
 }
-.card.blog img {
-  outline: 1px solid var(--dark);
+.card.blog {
+  min-height: 120px;
+  max-height: 120px;
+  background-color: var(--light);
+  overflow-y: hidden;
 }
-.card.blog.blurb {
+.card.blog img {
+  grid-area: img;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 120px;
+  align-self: center;
+  justify-self: left;
+}
+.card.blog h2 {
+  grid-area: title;
+  justify-self: center;
+}
+.card.blog p {
   grid-area: blurb;
   overflow-y: hidden;
+}
+.card.blog p.published {
+  grid-area: footer;
+}
+.card.blog article {
+  padding: 10px;
+  outline: 5px dashed var(--light);
+  z-index: 2;
 }
 .card.projects {
   background-color: var(--light);
@@ -182,13 +206,40 @@ a.off_page:hover {
 /* Tablet */
 @media only screen and (min-width: 481px) and (max-width: 960px) {
   body {
-    /* width: 90%; */
     max-width: 800px;
+  }
+  body .card.blog {
+    min-height: 160px;
+    max-height: 160px;
+    background-color: var(--light);
+    overflow-y: hidden;
+  }
+  body .card.blog img {
+    grid-area: img;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 160px;
+    align-self: center;
+    justify-self: left;
   }
 }
 /* Desktop */
 @media only screen and (min-width: 961px) {
   body {
     max-width: 800px;
+  }
+  body .card.blog {
+    min-height: 160px;
+    max-height: 160px;
+    background-color: var(--light);
+    overflow-y: hidden;
+  }
+  body .card.blog img {
+    grid-area: img;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 160px;
+    align-self: center;
+    justify-self: left;
   }
 }/*# sourceMappingURL=style.css.map */
