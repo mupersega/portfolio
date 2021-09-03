@@ -174,8 +174,7 @@ a.off_page:hover {
 }
 .card.blog img {
   grid-area: img;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   max-width: 120px;
   align-self: center;
   justify-self: left;
@@ -203,6 +202,72 @@ a.off_page:hover {
   height: 200px;
 }
 
+.blog_nav {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  justify-self: center;
+}
+.blog_nav a {
+  color: var(--accent);
+}
+.blog_nav a:hover {
+  background-color: #523a2a;
+}
+
+main.blog_article {
+  display: flex;
+  max-width: 500px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: var(--light);
+  overflow-y: scroll;
+  top: 3rem;
+  padding: 0px;
+  max-height: calc(100% - 100px);
+  position: fixed;
+  justify-self: center;
+}
+main.blog_article header {
+  background-color: #21fdf2;
+  height: 3rem;
+  display: block;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+main.blog_article img {
+  display: inline;
+  margin-right: 10px;
+  float: left;
+  width: 160px;
+  position: relative;
+}
+main.blog_article p {
+  display: inline;
+  position: relative;
+  text-align: center;
+}
+main.blog_article a {
+  display: inline;
+  color: var(--accent);
+  text-shadow: black 1px 0 5px;
+}
+main.blog_article a:hover {
+  text-shadow: var(--accent) 1px 0 10px;
+  transition: 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.blog_footer {
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+  position: fixed;
+  bottom: 0;
+  justify-self: center;
+}
+
 /* Tablet */
 @media only screen and (min-width: 481px) and (max-width: 960px) {
   body {
@@ -216,8 +281,7 @@ a.off_page:hover {
   }
   body .card.blog img {
     grid-area: img;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     max-width: 160px;
     align-self: center;
     justify-self: left;
@@ -236,8 +300,7 @@ a.off_page:hover {
   }
   body .card.blog img {
     grid-area: img;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     max-width: 160px;
     align-self: center;
     justify-self: left;
