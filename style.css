@@ -106,6 +106,14 @@ main.contacts p {
   background-color: rgba(33, 25, 25, 0.7);
   border-radius: 2px;
 }
+main.contacts span {
+  display: flex;
+  justify-content: center;
+}
+main.contacts span a:hover {
+  text-shadow: var(--lightest) 0px 0 3px;
+  cursor: pointer;
+}
 main.contacts:hover {
   background-position: right 4000px bottom, right 3200px bottom;
   transition: 40s cubic-bezier(0.28, 0.01, 0.52, 0.99);
@@ -116,6 +124,7 @@ main.contacts .socials-container {
   height: 70%;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 main.contacts .socials-container .unique-social {
   min-width: 300px;

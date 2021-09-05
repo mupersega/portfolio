@@ -139,6 +139,17 @@ main {
             border-radius: 2px;
         }
 
+        span {
+            display:flex;
+            justify-content: center;
+            a:hover {
+                text-shadow: var(--lightest) 0px 0 3px;
+                cursor: pointer;
+            }
+        }
+
+            
+        
         &:hover {
             background-position:
                 right 4000px bottom,
@@ -151,14 +162,13 @@ main {
             height: 70%;
             flex-direction: row;
             flex-wrap: wrap;
+            justify-content: center;
         
             .unique-social {
                 min-width: 300px;
                 max-width: 500px;
-                // height: fit-content;
                 display: flex;
                 flex: 1;
-                // align-self: center;
                 align-items: top;
                 justify-content: center;
         
@@ -171,7 +181,6 @@ main {
 
                 a {
                     display: inherit;
-                    // background-color: transparent;
                     position: absolute;
                     width: 100px;
                     height: 100px;
