@@ -174,7 +174,7 @@ a.off_page:hover {
 }
 .card.blog img {
   grid-area: img;
-  object-fit: cover;
+  object-fit: fill;
   max-width: 120px;
   align-self: center;
   justify-self: left;
@@ -194,6 +194,15 @@ a.off_page:hover {
   padding: 10px;
   outline: 5px dashed var(--light);
   z-index: 2;
+}
+.card.blog article a {
+  font-size: 1.3em;
+  color: var(--accent);
+}
+.card.blog article a:hover {
+  background-color: #4a807d;
+  text-shadow: var(--accent) 1px 0 10px;
+  transition: 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .card.projects {
   background-color: var(--light);
@@ -230,7 +239,7 @@ main.blog_article {
 }
 main.blog_article header {
   background-color: #21fdf2;
-  height: 3rem;
+  height: fit-content;
   display: block;
   position: sticky;
   top: 0;
@@ -243,6 +252,7 @@ main.blog_article img {
   float: left;
   width: 160px;
   position: relative;
+  object-fit: fill;
 }
 main.blog_article p {
   display: inline;
