@@ -1,0 +1,78 @@
+commit 3103a76a6da4d40a6517c9aa914378b5e3d9b829
+Author: mupersega <cambodiam@hotmail.com>
+Date:   Sun Sep 5 19:34:49 2021 +1000
+
+    deleted unused assets
+
+commit a49535e963b34b34849055f6ce69539be626ad43
+Author: mupersega <cambodiam@hotmail.com>
+Date:   Sun Sep 5 18:23:09 2021 +1000
+
+    added resume link and SRI
+
+commit b4d40bf0f9aab3aadb5820902fd28256cbc4427a
+Author: mupersega <cambodiam@hotmail.com>
+Date:   Sun Sep 5 16:58:03 2021 +1000
+
+    final draft
+
+commit 4fc6db307bd6d4834e0034a0786a1f7c9a1f86f1
+Author: mupersega <cambodiam@hotmail.com>
+Date:   Sun Sep 5 13:28:07 2021 +1000
+
+    added blogs wtih links
+
+commit 578439f5766f9d132ffd0baf5db10abdd3d8016c
+Author: mupersega <cambodiam@hotmail.com>
+Date:   Sat Sep 4 01:40:44 2021 +1000
+
+    added blog article template
+
+commit 1e71b72b97d48c27a38c8aa4264fd47883449e4f
+Author: mupersega <cambodiam@hotmail.com>
+Date:   Fri Sep 3 13:15:47 2021 +1000
+
+    added in sass and rebuilt the css to reflect that.
+    fixed blog cards.
+
+commit 6efe66b70b4d580cd72c664fc293efc98f4ecc34
+Author: mupersega <cambodiam@hotmail.com>
+Date:   Thu Sep 2 01:27:39 2021 +1000
+
+    fixed responsive GRID layout on projects for all devices
+    broke blogs
+
+commit 316ebb550a725278d0ee966b273106b847ad41f3
+Author: mupersega <cambodiam@hotmail.com>
+Date:   Wed Sep 1 18:58:08 2021 +1000
+
+    latest commit with many updates, just after presentation.
+
+commit 4e1fd67fa3b35e956d9d2e267773d0a979a29e28
+Author: mupersega <cambodiam@hotmail.com>
+Date:   Sun Aug 29 21:39:57 2021 +1000
+
+    added in landing page art
+    added paralax on landing page
+    begun fleshing out blog page
+    begun laying out blog cards
+
+commit 217eedf861b7af94e9cc99b1fd310f7fd9940fe6
+Author: mupersega <cambodiam@hotmail.com>
+Date:   Sun Aug 29 02:19:59 2021 +1000
+
+    fleshed out all htmls
+    added nav bars
+    styled project cards
+
+commit 86c863481a1d9c9c68130079d79d0afd615034d4
+Author: mupersega <cambodiam@hotmail.com>
+Date:   Sat Aug 28 00:36:57 2021 +1000
+
+    added accent colours and span rules
+
+commit cd362bdb3c208d92981daefa9644c2f7a02d17b0
+Author: mupersega <cambodiam@hotmail.com>
+Date:   Sat Aug 28 00:18:15 2021 +1000
+
+    initial commit including index.html
